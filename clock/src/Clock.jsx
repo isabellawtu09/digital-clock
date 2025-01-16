@@ -25,11 +25,11 @@ function formatTime(){
     let hours = time.getHours();
     const minutes = time.getMinutes();
     const seconds = time.getSeconds();
-    const meridian = hours >= 12 ? "pm" : "am";
+    const meridiem = hours >= 12 ? "PM" : "AM";
     // if hour == 12 return 12 not  0
     hours = hours % 12|| 12;
 
-return `${padZero(hours)}:${padZero(minutes)}:${padZero(seconds)}`;
+return `${padZero(hours)}:${padZero(minutes)}:${padZero(seconds)} ${meridiem}`;
 }
 
 
